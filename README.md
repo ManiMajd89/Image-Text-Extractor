@@ -1,4 +1,4 @@
-# Image-Text-Extractor
+# Image Text Extractor
 
 ## Project Overview
 This project uses OpenCV and Tesseract OCR to detect and extract text from images. The program preprocesses images, identifies text regions, and converts them into readable text, which is saved to a file and optionally displayed. This project is ideal for automating text recognition tasks in scanned documents, photographs, or other image files.
@@ -79,24 +79,10 @@ This project uses OpenCV and Tesseract OCR to detect and extract text from image
 ### Example
 
 #### Input Image:
-![Example Input Image](example-input.png)
+
 
 #### Output:
-File: `detected text.txt`
-```plaintext
-Sample Detected Text
-```
 
-Terminal:
-```plaintext
-The detected text is:
-Sample Detected Text
-
-Text extraction complete. The results have been saved in 'detected text.txt'.
-```
-
-Visualized Regions:
-![Example Output Image](example-output.png)
 
 ---
 
