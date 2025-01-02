@@ -108,20 +108,6 @@ The project consists of the following main steps:
 
 ---
 
-## File Structure
-
-```
-text-extraction-opencv/
-│
-├── text_extraction.py          # Main script for text extraction
-├── detected text.txt           # Output file for extracted text
-├── sample.jpg                  # Example input image
-├── example-input.png           # Screenshot of the input image (optional)
-└── example-output.png          # Screenshot of the output with regions highlighted (optional)
-```
-
----
-
 ## Future Enhancements
 1. **Improved OCR**:
    - Adjust Tesseract configurations for better results with specific text types.
