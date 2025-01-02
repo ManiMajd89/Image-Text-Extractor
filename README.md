@@ -8,19 +8,18 @@ This project uses OpenCV and Tesseract OCR to detect and extract text from image
 ## Features
 
 - **Preprocessing**:
-  - Converts images to grayscale.
-  - Uses adaptive thresholding for binarization.
-  - Applies dilation to enhance text regions.
+  - Converts images to grayscale for simpler processing.
+  - Uses adaptive thresholding to binarize the image and make text regions prominent.
+  - Applies dilation to expand text regions for better detection.
 - **Text Detection**:
-  - Finds contours to identify potential text areas.
-  - Filters small or irrelevant regions.
+  - Finds contours to identify potential text regions.
+  - Filters out small contours to remove irrelevant areas.
 - **Text Extraction**:
-  - Crops and processes text regions.
-  - Uses Tesseract OCR to extract readable text.
+  - Crops and resizes text regions for improved OCR accuracy.
+  - Extracts text using Tesseract OCR.
 - **Output**:
-  - Saves detected text to a file (`detected text.txt`).
-  - Displays detected text in the terminal.
-  - Optionally visualizes text regions on the image.
+  - Saves the extracted text to `detected text.txt`.
+  - Prints the extracted text directly to the terminal.
 
 ---
 
@@ -89,34 +88,35 @@ This project uses OpenCV and Tesseract OCR to detect and extract text from image
 
 ## Code Explanation
 
-The project consists of the following main steps:
+The program works as follows:
 
-1. **Image Preprocessing**:
-   - Converts the image to grayscale.
-   - Applies adaptive thresholding and dilation to highlight text regions.
+1. **Load and Preprocess the Image**:
+   - Converts the input image to grayscale.
+   - Applies adaptive thresholding to binarize the image.
+   - Uses dilation to merge close text components.
 
-2. **Text Region Detection**:
-   - Detects contours to identify potential text blocks.
-   - Filters out small, irrelevant contours.
+2. **Detect Text Regions**:
+   - Finds contours in the processed image.
+   - Filters small contours to avoid noise.
+   - Crops and resizes potential text regions.
 
-3. **Text Extraction**:
-   - Crops each text region and resizes it for better OCR accuracy.
-   - Uses Tesseract to extract text from the cropped regions.
-
-4. **Output**:
-   - Writes the detected text to a file and optionally displays it in a window.
+3. **Extract and Output Text**:
+   - Passes the cropped regions to Tesseract for text recognition.
+   - Writes the detected text to a file and displays it in the terminal.
 
 ---
 
-## Future Enhancements
-1. **Improved OCR**:
-   - Adjust Tesseract configurations for better results with specific text types.
-   - Resize text regions before OCR for improved accuracy.
-2. **Multi-Language Support**:
-   - Add support for non-English languages by specifying the language model:
-     ```python
-     text = pytesseract.image_to_string(cropped, lang="spa")
-     ```
-3. **Error Handling**:
-   - Handle invalid images or missing dependencies gracefully.
+## Future Possible Enhancements
 
+1. **Improved OCR Accuracy**:
+   - Implement advanced preprocessing techniques like noise reduction, skew correction, and edge enhancement for cleaner text regions.
+   - Experiment with different OCR configurations for handling complex layouts.
+
+2. **Multi-Language Support**:
+   - Extend Tesseract's language models to support text extraction in languages other than English.
+
+3. **Support for Curved Text**:
+   - Enhance the program to detect and process curved or rotated text using tools like Hough Transform or deskewing algorithms.
+
+4. **Error Handling and Validation**:
+   - Add error handling for missing dependencies, invalid input files, and unreadable text regions.
