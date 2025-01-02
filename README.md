@@ -122,7 +122,7 @@ text-extraction-opencv/
 
 ---
 
-## Enhancements
+## Future Enhancements
 1. **Improved OCR**:
    - Adjust Tesseract configurations for better results with specific text types.
    - Resize text regions before OCR for improved accuracy.
