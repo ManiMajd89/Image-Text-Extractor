@@ -79,10 +79,11 @@ This project uses OpenCV and Tesseract OCR to detect and extract text from image
 ### Example
 
 #### Input Image:
+![Input Image](https://github.com/ManiMajd89/Image-Text-Extractor/blob/main/image2.png)
 
 
 #### Output:
-
+![Output Sample](https://github.com/ManiMajd89/Image-Text-Extractor/blob/main/output%20sample.png)
 
 ---
 
